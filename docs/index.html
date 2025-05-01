@@ -5,169 +5,314 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Hendru Mohan - Career Profile</title>
   <style>
+    :root {
+      --primary-color: #2c3e50;
+      --secondary-color: #34495e;
+      --accent-color: #3498db;
+      --text-color: #333;
+      --light-gray: #ecf0f1;
+      --spacing: 1.5rem;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
     body {
-      font-family: Arial, sans-serif;
-      margin: 30px;
+      font-family: 'Segoe UI', Arial, sans-serif;
       line-height: 1.6;
+      color: var(--text-color);
+      background-color: #f9f9f9;
+      padding: 2rem 1rem;
     }
-    h1, h2, h3 {
-      color: #2c3e50;
+
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+      background-color: white;
+      padding: var(--spacing);
+      border-radius: 12px;
+      box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
     }
+
+    h1 {
+      color: var(--primary-color);
+      text-align: center;
+      font-size: 2.5rem;
+      margin-bottom: 2rem;
+      padding-bottom: 1rem;
+      border-bottom: 3px solid var(--accent-color);
+    }
+
+    h2 {
+      color: var(--secondary-color);
+      margin: 2rem 0 1rem;
+      font-size: 1.8rem;
+      position: relative;
+      padding-left: 1rem;
+    }
+
+    h2::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      height: 100%;
+      width: 4px;
+      background-color: var(--accent-color);
+      border-radius: 2px;
+    }
+
     section {
-      margin-bottom: 30px;
+      margin-bottom: 2.5rem;
+      padding: 1rem;
+      background-color: white;
+      border-radius: 8px;
     }
-    ul {
-      margin-left: 20px;
+
+    .job-entry {
+      margin-bottom: 2rem;
+      padding: 1.5rem;
+      background-color: var(--light-gray);
+      border-radius: 8px;
+      transition: transform 0.2s;
     }
+
+    .job-entry:hover {
+      transform: translateX(5px);
+    }
+
     .job-title {
       font-weight: bold;
-      font-size: 1.1em;
+      font-size: 1.2rem;
+      color: var(--primary-color);
+      margin-bottom: 0.5rem;
     }
+
     .company {
       font-style: italic;
-      color: #555;
+      color: var(--accent-color);
+      margin-bottom: 0.3rem;
     }
+
     .duration {
-      color: #888;
+      color: #666;
+      font-size: 0.9rem;
+      margin-bottom: 1rem;
+    }
+
+    ul {
+      list-style-position: inside;
+      margin: 1rem 0;
+      padding-left: 1rem;
+    }
+
+    li {
+      margin-bottom: 0.5rem;
+    }
+
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      gap: 1rem;
+      margin-top: 1rem;
+    }
+
+    .skill-item {
+      background-color: var(--light-gray);
+      padding: 0.8rem;
+      border-radius: 6px;
+      text-align: center;
+      transition: background-color 0.2s;
+    }
+
+    .skill-item:hover {
+      background-color: var(--accent-color);
+      color: white;
+    }
+
+    .languages {
+      display: flex;
+      gap: 1rem;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .language-item {
+      background-color: var(--light-gray);
+      padding: 0.8rem 1.5rem;
+      border-radius: 20px;
+      font-weight: 500;
+    }
+
+    @media (max-width: 768px) {
+      .container {
+        padding: 1rem;
+      }
+
+      h1 {
+        font-size: 2rem;
+      }
+
+      h2 {
+        font-size: 1.5rem;
+      }
+
+      .job-entry {
+        padding: 1rem;
+      }
+
+      .skills-grid {
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+      }
+    }
+
+    .certification-item {
+      padding: 1rem;
+      margin-bottom: 1rem;
+      background-color: var(--light-gray);
+      border-radius: 8px;
+      border-left: 4px solid var(--accent-color);
     }
   </style>
 </head>
 <body>
-  <h1>Hendru Mohan</h1>
+  <div class="container">
+    <h1>Hendru Mohan</h1>
 
-  <section>
-    <h2>Career History</h2>
+    <section>
+      <h2>Career History</h2>
 
-    <div>
-      <p class="job-title">Customer Service Manager</p>
-      <p class="company">OIB Group Sdn Bhd (Myra)</p>
-      <p class="duration">Mar 2019 - Present (6 years 2 months)</p>
-      <ul>
-        <li>Managing a team of customer service executives for defect and QA handling.</li>
-        <li>Developing proactive plans to resolve customer complaints.</li>
-        <li>Conducting quality assurance surveys and reporting findings.</li>
-        <li>Handling customer inquiries and complaints via phone/email.</li>
-        <li>Recruiting, mentoring, and empowering customer service staff.</li>
-        <li>Delegating tasks and setting deadlines.</li>
-        <li>Inspecting sites, updating databases, and escalating issues.</li>
-        <li>Coordinating operations to deliver outstanding service within compliance.</li>
-        <li>Monitoring SLA performance and generating reports.</li>
-        <li>Analyzing statistics and maintaining budget/workflow priorities.</li>
-      </ul>
-      <p><strong>Achievements:</strong></p>
-      <ul>
-        <li>Won the "Green Card" recognition three times consecutively.</li>
-        <li>Rolled out SOP for defect handling and contractor monitoring.</li>
-        <li>Created the "CS Reference Book" for team guidance.</li>
-        <li>Promoted to senior level within 1 year.</li>
-        <li>Reduced backlog from 160 to under 30 cases in 2 months.</li>
-        <li>Attended tribunal hearings related to defects and developments.</li>
-      </ul>
-    </div>
+      <div class="job-entry">
+        <p class="job-title">Customer Service Manager</p>
+        <p class="company">OIB Group Sdn Bhd (Myra)</p>
+        <p class="duration">Mar 2019 - Present (6 years 2 months)</p>
+        <ul>
+          <li>Managing a team of customer service executives for defect and QA handling.</li>
+          <li>Developing proactive plans to resolve customer complaints.</li>
+          <li>Conducting quality assurance surveys and reporting findings.</li>
+          <li>Handling customer inquiries and complaints via phone/email.</li>
+          <li>Recruiting, mentoring, and empowering customer service staff.</li>
+          <li>Delegating tasks and setting deadlines.</li>
+          <li>Inspecting sites, updating databases, and escalating issues.</li>
+          <li>Coordinating operations to deliver outstanding service within compliance.</li>
+          <li>Monitoring SLA performance and generating reports.</li>
+          <li>Analyzing statistics and maintaining budget/workflow priorities.</li>
+        </ul>
+        <p><strong>Achievements:</strong></p>
+        <ul>
+          <li>Won the "Green Card" recognition three times consecutively.</li>
+          <li>Rolled out SOP for defect handling and contractor monitoring.</li>
+          <li>Created the "CS Reference Book" for team guidance.</li>
+          <li>Promoted to senior level within 1 year.</li>
+          <li>Reduced backlog from 160 to under 30 cases in 2 months.</li>
+          <li>Attended tribunal hearings related to defects and developments.</li>
+        </ul>
+      </div>
 
-    <div>
-      <p class="job-title">Customer Service Associate</p>
-      <p class="company">Conduent Business Services Malaysia Sdn. Bhd.</p>
-      <p class="duration">Aug 2017 - Oct 2018 (1 year 3 months)</p>
-      <ul>
-        <li>Handled US customer chats/emails, guided online shopping experiences.</li>
-        <li>Assisted in site navigation and issue resolution.</li>
-        <li>Provided support via chat, social media, and email.</li>
-        <li>Managed monthly KPI reports and performance monitoring.</li>
-        <li>Submitted reports to operations manager and assisted in QA tasks.</li>
-      </ul>
-    </div>
+      <div class="job-entry">
+        <p class="job-title">Customer Service Associate</p>
+        <p class="company">Conduent Business Services Malaysia Sdn. Bhd.</p>
+        <p class="duration">Aug 2017 - Oct 2018 (1 year 3 months)</p>
+        <ul>
+          <li>Handled US customer chats/emails, guided online shopping experiences.</li>
+          <li>Assisted in site navigation and issue resolution.</li>
+          <li>Provided support via chat, social media, and email.</li>
+          <li>Managed monthly KPI reports and performance monitoring.</li>
+          <li>Submitted reports to operations manager and assisted in QA tasks.</li>
+        </ul>
+      </div>
 
-    <div>
-      <p class="job-title">Operation Associate</p>
-      <p class="company">Lazada Express (Malaysia) Sdn. Bhd.</p>
-      <p class="duration">Sep 2016 - May 2017 (9 months)</p>
-      <ul>
-        <li>Assisted Sortation Manager with administrative and clerical support.</li>
-        <li>Coordinated receiving and shipping operations.</li>
-        <li>Helped train inbound/outbound staff and supervised daily tasks.</li>
-        <li>Prepared reports and handled vendor handovers.</li>
-      </ul>
-    </div>
+      <div class="job-entry">
+        <p class="job-title">Operation Associate</p>
+        <p class="company">Lazada Express (Malaysia) Sdn. Bhd.</p>
+        <p class="duration">Sep 2016 - May 2017 (9 months)</p>
+        <ul>
+          <li>Assisted Sortation Manager with administrative and clerical support.</li>
+          <li>Coordinated receiving and shipping operations.</li>
+          <li>Helped train inbound/outbound staff and supervised daily tasks.</li>
+          <li>Prepared reports and handled vendor handovers.</li>
+        </ul>
+      </div>
 
-    <div>
-      <p class="job-title">Customer Service Associate</p>
-      <p class="company">Ecart Services Malaysia Sdn Bhd</p>
-      <p class="duration">Sep 2015 - Feb 2016 (6 months)</p>
-      <ul>
-        <li>Handled credit card and bank transfer refunds.</li>
-        <li>Ensured all refund documentation was complete and accurate.</li>
-        <li>Managed customer requests and prepared third-party emails for older refunds.</li>
-      </ul>
-    </div>
+      <div class="job-entry">
+        <p class="job-title">Customer Service Associate</p>
+        <p class="company">Ecart Services Malaysia Sdn Bhd</p>
+        <p class="duration">Sep 2015 - Feb 2016 (6 months)</p>
+        <ul>
+          <li>Handled credit card and bank transfer refunds.</li>
+          <li>Ensured all refund documentation was complete and accurate.</li>
+          <li>Managed customer requests and prepared third-party emails for older refunds.</li>
+        </ul>
+      </div>
 
-    <div>
-      <p class="job-title">Customer Service Assistant</p>
-      <p class="company">Panpages Online Sdn Bhd</p>
-      <p class="duration">Jul 2014 - Sep 2015 (1 year 3 months)</p>
-      <ul>
-        <li>Assisted clients with Google Business View 360 issues.</li>
-        <li>Scheduled photo shoots and coordinated with photographers.</li>
-        <li>Liaised with Google's team for technical verifications.</li>
-        <li>Maintained CRM database accuracy.</li>
-      </ul>
-    </div>
+      <div class="job-entry">
+        <p class="job-title">Customer Service Assistant</p>
+        <p class="company">Panpages Online Sdn Bhd</p>
+        <p class="duration">Jul 2014 - Sep 2015 (1 year 3 months)</p>
+        <ul>
+          <li>Assisted clients with Google Business View 360 issues.</li>
+          <li>Scheduled photo shoots and coordinated with photographers.</li>
+          <li>Liaised with Google's team for technical verifications.</li>
+          <li>Maintained CRM database accuracy.</li>
+        </ul>
+      </div>
 
-    <div>
-      <p class="job-title">Customer Service Assistant</p>
-      <p class="company">One Mobile Care Sdn Bhd</p>
-      <p class="duration">Jun 2013 - Jul 2014 (1 year 2 months)</p>
-      <ul>
-        <li>Diagnosed and repaired devices in-store.</li>
-        <li>Resolved customer issues and tracked account details.</li>
-        <li>Recommended device solutions and recorded interactions.</li>
-      </ul>
-    </div>
-  </section>
+      <div class="job-entry">
+        <p class="job-title">Customer Service Assistant</p>
+        <p class="company">One Mobile Care Sdn Bhd</p>
+        <p class="duration">Jun 2013 - Jul 2014 (1 year 2 months)</p>
+        <ul>
+          <li>Diagnosed and repaired devices in-store.</li>
+          <li>Resolved customer issues and tracked account details.</li>
+          <li>Recommended device solutions and recorded interactions.</li>
+        </ul>
+      </div>
+    </section>
 
-  <section>
-    <h2>Education</h2>
-    <p><strong>SMK USJ 8</strong><br/>Primary/Secondary School/"O" Level<br/>Completed in 2012</p>
-  </section>
+    <section>
+      <h2>Education</h2>
+      <p><strong>SMK USJ 8</strong><br/>Primary/Secondary School/"O" Level<br/>Completed in 2012</p>
+    </section>
 
-  <section>
-    <h2>Licences & Certifications</h2>
-    <ul>
-      <li><strong>Scaling Up Workshop 2023</strong> – Lynch Pin (Jun 2023)</li>
-      <li><strong>Strata Management Conference 2024</strong> – Rehda Institute (Jan 2024)</li>
-      <li><strong>QLASSIC Awareness Training</strong> – CIDB Holdings (Dec 2023)</li>
-    </ul>
-  </section>
+    <section>
+      <h2>Licences & Certifications</h2>
+      <div class="certification-item"><strong>Scaling Up Workshop 2023</strong> – Lynch Pin (Jun 2023)</div>
+      <div class="certification-item"><strong>Strata Management Conference 2024</strong> – Rehda Institute (Jan 2024)</div>
+      <div class="certification-item"><strong>QLASSIC Awareness Training</strong> – CIDB Holdings (Dec 2023)</div>
+    </section>
 
-  <section>
-    <h2>Skills</h2>
-    <ul>
-      <li>Zendesk</li>
-      <li>SQL</li>
-      <li>Reporting</li>
-      <li>QA</li>
-      <li>Problem Solving</li>
-      <li>Microsoft Office</li>
-      <li>PegasusWork</li>
-      <li>Defect Management</li>
-      <li>Customer Care</li>
-      <li>Communication Skills</li>
-      <li>Basic Photography</li>
-      <li>Analytical Thinking</li>
-      <li>Knowledge in Google Business View</li>
-      <li>Effective Time Management</li>
-      <li>Results Focused</li>
-      <li>Willingness to Learn</li>
-    </ul>
-  </section>
+    <section>
+      <h2>Skills</h2>
+      <div class="skills-grid">
+        <div class="skill-item">Zendesk</div>
+        <div class="skill-item">SQL</div>
+        <div class="skill-item">Reporting</div>
+        <div class="skill-item">QA</div>
+        <div class="skill-item">Problem Solving</div>
+        <div class="skill-item">Microsoft Office</div>
+        <div class="skill-item">PegasusWork</div>
+        <div class="skill-item">Defect Management</div>
+        <div class="skill-item">Customer Care</div>
+        <div class="skill-item">Communication Skills</div>
+        <div class="skill-item">Basic Photography</div>
+        <div class="skill-item">Analytical Thinking</div>
+        <div class="skill-item">Google Business View</div>
+        <div class="skill-item">Time Management</div>
+        <div class="skill-item">Results Focused</div>
+        <div class="skill-item">Willingness to Learn</div>
+      </div>
+    </section>
 
-  <section>
-    <h2>Languages</h2>
-    <ul>
-      <li>Bahasa Malaysia</li>
-      <li>English</li>
-      <li>Tamil</li>
-    </ul>
-  </section>
+    <section>
+      <h2>Languages</h2>
+      <div class="languages">
+        <div class="language-item">Bahasa Malaysia</div>
+        <div class="language-item">English</div>
+        <div class="language-item">Tamil</div>
+      </div>
+    </section>
+  </div>
 </body>
 </html>
